@@ -1,0 +1,43 @@
+included:
+  - /Users/haykkolozyan/Library/Mobile Documents/com~apple~CloudDocs/Developing/prime/chat-sdk/chat_ios/Sources
+
+disabled_rules:
+  - trailing_comma
+  - large_tuple
+  - multiple_closures_with_trailing_closure
+  - todo
+  - nesting
+  - comma
+  - control_statement
+  - redudant_string_enum_value
+  - void_function_in_ternary
+  - type_name
+
+function_parameter_count:
+  warning: 5
+  error: 10
+
+file_length:
+  warning: 1000
+
+type_body_length:
+  warning: 400
+  error: 450
+
+line_length:
+  warning: 120
+
+function_body_length:
+  warning: 80
+
+identifier_name:
+  allowed_symbols: ["_"]
+  excluded: ["^i$", "^id$", "^x$", "^y$"]
+  min_length: 1
+  max_length: 
+    warning: 50
+    error: 60
+  validate_start_with_lowercase: warning
+
+trailing_whitespace:
+  ignores_empty_lines: true

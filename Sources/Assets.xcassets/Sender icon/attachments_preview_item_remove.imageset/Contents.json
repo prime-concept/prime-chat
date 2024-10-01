@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "sender_attachments_preview_item_close_icon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

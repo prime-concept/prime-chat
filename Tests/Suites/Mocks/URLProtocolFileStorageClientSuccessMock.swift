@@ -1,0 +1,49 @@
+//
+//  URLProtocolFileStorageClientSuccessMock.swift
+//  ChatSDK
+//
+//  Created by Hayk Kolozyan on 21.05.24.
+//
+
+import Foundation
+
+class URLProtocolFileStorageClientSuccessMock: URLProtocol {
+
+    /// what types of the request to handle
+    override class func canInit(with request: URLRequest) -> Bool {
+        request.url!.absoluteString.hasPrefix("example.com/files")
+    }
+
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
+
+    /// start loading
+    override func startLoading() {
+
+        let statusCode: Int = 200
+        let dataLoaded: Data = Self.jsonString.data(using: .utf8)!
+
+        let response = HTTPURLResponse(
+            url: request.url!,
+            statusCode: statusCode,
+            httpVersion: nil,
+            headerFields: nil
+        )!
+
+        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+        client?.urlProtocol(self, didLoad: dataLoaded)
+
+        client?.urlProtocolDidFinishLoading(self)
+    }
+
+    /// this method is required but doesn't need to do anything
+    override func stopLoading() { }
+
+    // MARK: - json
+
+    private static let jsonString =
+    """
+    {
+        "status": "SUCCESS"
+    }
+    """
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "chat_attach_icon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

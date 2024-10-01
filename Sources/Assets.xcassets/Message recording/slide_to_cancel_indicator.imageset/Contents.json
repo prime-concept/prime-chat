@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "message_recording_indicator.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
